@@ -1,5 +1,7 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,14 +10,24 @@ namespace Libretto
 {
     class LibrettoStudente
     {
+        public static string path = @"E:\Pink Academy\LibrettoStudente.txt";
         public static void Start()
         {
-            string nome =NomeStudente();
+            string nome = NomeStudente();
             string cognome = CognomeStudente();
             double media = mediaEsami();
+
+            string messaggio=("Nome\t Cognome\t Media");
+            string dati=($"{nome}\t {cognome}\t\t {media}");
             
-            Console.WriteLine($"\nDATI STUDENTE\nNome: {nome}\nCognome: {cognome}\nMedia: {media} ");
-        }
+            using (StreamWriter sw1 = new StreamWriter(path, false))
+            {
+                sw1.WriteLine(messaggio);
+                sw1.WriteLine(dati);
+            }
+            
+
+       }
         static string NomeStudente()
         {
             string nomeStudente = null;
@@ -38,20 +50,22 @@ namespace Libretto
             int numeroEsami = CheckNum();
             int[] votiEsami = new int[numeroEsami];
             double mean = 0;
-            for (int i=0;i<numeroEsami;i++)
+            for (int i = 0; i < numeroEsami; i++)
             {
                 Console.WriteLine("Inserisci voto:");
                 votiEsami[i] = CheckNum();
             }
             double somma = 0;
-            for(int i=0;i<numeroEsami; i++)
+            for (int i = 0; i < numeroEsami; i++)
             {
                 somma = somma + votiEsami[i];
             }
             mean = somma / numeroEsami;
-            return mean; 
+            return mean;
 
         }
+
+
         static string CheckIns()
         {
             string s = Console.ReadLine();

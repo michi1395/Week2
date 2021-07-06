@@ -7,6 +7,8 @@ namespace Libretto
         static void Main(string[] args)
         {
             LibrettoStudente.Start();
+
+            
         }
     }
 }

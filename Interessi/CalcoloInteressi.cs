@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
 
 namespace Interessi
 {
@@ -12,17 +14,19 @@ namespace Interessi
         {
             double importoDaVincolare = ChiediImporto();
             int anni = ChiediAnni();
-            double importoFinaleIter=CalcoloValoreIterativo(importoDaVincolare,anni);
+            int save = ChiediDoveVuoiStampare();
+
+            double importoFinaleIter = CalcoloValoreIterativo(importoDaVincolare, anni,save);
             double importoFinale = CalcoloValoreRicorsivo(importoDaVincolare, anni);
-            Console.WriteLine($"Dopo {anni} da {importoDaVincolare} avrai {importoFinale}");
+            Console.WriteLine($"Dopo {anni} anni da {importoDaVincolare} avrai {importoFinale}");
 
         }
 
-        static double CalcoloValoreRicorsivo(double importo,int anni)
+        static double CalcoloValoreRicorsivo(double importo, int anni)
         {
             if (anni > 0)
             {
-                return CalcoloValoreRicorsivo(importo + (importo * 3 / 100), anni - 1);
+                return CalcoloValoreRicorsivo(importo + (importo * anni / 100), anni - 1);
             }
             else
             {
@@ -30,18 +34,22 @@ namespace Interessi
             }
 
         }
-        static double CalcoloValoreIterativo(double importoDaVincolare,int anni)
+        static double CalcoloValoreIterativo(double importoDaVincolare, int anni,int save)
         {
             double importoConInteressi = importoDaVincolare;
-            for (int i=0;i<anni; i++)
+            for (int i = 0; i < anni; i++)
             {
                 double importoAnnoPrecedente = importoConInteressi;
                 double interessi = importoConInteressi * anni / 100;
                 importoConInteressi = importoConInteressi + interessi;
-                Console.WriteLine($"Dopo {i+1} anni, da {importoAnnoPrecedente} avrai  maturato {interessi} e il tuo nuovo capitale sarà {importoConInteressi}");
+                string messaggio = ($"Dopo il {i + 1}° anno, da  {importoAnnoPrecedente}  avrai maturato  { interessi}  e il tuo nuovo capitale sarà  { importoConInteressi} ");
+
+
+                FileManager.Indirizzatore(messaggio, i,save); //richiamo un'altra classe
             }
             return importoConInteressi;
         }
+
 
         static double ChiediImporto()
         {
@@ -79,5 +87,18 @@ namespace Interessi
             return num;
 
         }
+
+        static int ChiediDoveVuoiStampare()
+        {
+            int tipoDiOutput = 0;
+            Console.WriteLine("Prendi 0 per stampare su file, premi 1 per stampare a video");
+            while(!int.TryParse(Console.ReadLine(), out tipoDiOutput))
+            {
+                Console.WriteLine("Puoi inserire solo 0 o 1! Riprova:");
+            }
+
+            return tipoDiOutput;
+        }
+        }
     }
-}
+

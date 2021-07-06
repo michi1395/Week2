@@ -15,6 +15,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Libretto", "Libretto\Libret
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "File", "File\File.csproj", "{37F605FB-EA17-44E5-ABBE-5E4FA4DD4F7B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Classe", "Persona\Classe.csproj", "{FDFC3F4B-0615-4C42-A0AB-5C2E66B6BF7E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Libreria", "Libreria\Libreria.csproj", "{C3FF64B6-E3DD-47E8-A212-309E183217A6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +49,14 @@ Global
 		{37F605FB-EA17-44E5-ABBE-5E4FA4DD4F7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{37F605FB-EA17-44E5-ABBE-5E4FA4DD4F7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{37F605FB-EA17-44E5-ABBE-5E4FA4DD4F7B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FDFC3F4B-0615-4C42-A0AB-5C2E66B6BF7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDFC3F4B-0615-4C42-A0AB-5C2E66B6BF7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDFC3F4B-0615-4C42-A0AB-5C2E66B6BF7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDFC3F4B-0615-4C42-A0AB-5C2E66B6BF7E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3FF64B6-E3DD-47E8-A212-309E183217A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3FF64B6-E3DD-47E8-A212-309E183217A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3FF64B6-E3DD-47E8-A212-309E183217A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3FF64B6-E3DD-47E8-A212-309E183217A6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
