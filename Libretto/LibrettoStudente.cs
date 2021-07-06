@@ -52,6 +52,8 @@ namespace Libretto
             return mean; 
 
         }
+
+    
         static string CheckIns()
         {
             string s = Console.ReadLine();

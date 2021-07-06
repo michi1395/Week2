@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
 
 namespace Interessi
 {
@@ -14,7 +16,7 @@ namespace Interessi
             int anni = ChiediAnni();
             double importoFinaleIter=CalcoloValoreIterativo(importoDaVincolare,anni);
             double importoFinale = CalcoloValoreRicorsivo(importoDaVincolare, anni);
-            Console.WriteLine($"Dopo {anni} da {importoDaVincolare} avrai {importoFinale}");
+            Console.WriteLine($"Dopo {anni} anni da {importoDaVincolare} avrai {importoFinale}");
 
         }
 
@@ -22,7 +24,7 @@ namespace Interessi
         {
             if (anni > 0)
             {
-                return CalcoloValoreRicorsivo(importo + (importo * 3 / 100), anni - 1);
+                return CalcoloValoreRicorsivo(importo + (importo * anni / 100), anni - 1);
             }
             else
             {
@@ -38,9 +40,19 @@ namespace Interessi
                 double importoAnnoPrecedente = importoConInteressi;
                 double interessi = importoConInteressi * anni / 100;
                 importoConInteressi = importoConInteressi + interessi;
-                Console.WriteLine($"Dopo {i+1} anni, da {importoAnnoPrecedente} avrai  maturato {interessi} e il tuo nuovo capitale sarà {importoConInteressi}");
+                ScritturaFile(i + 1, importoAnnoPrecedente, importoConInteressi, interessi);
             }
             return importoConInteressi;
+        }
+
+        static void ScritturaFile(int anno, double importoAnnoPrecedente, double importoConInteressi, double interessi)
+        {
+            var path = @"E:\Pink Academy\InteressiMaturati.txt";
+            using (StreamWriter sw1 = new StreamWriter(path,true)) 
+            {
+                sw1.WriteLine($"Dopo il {anno}° anno, da  {importoAnnoPrecedente}  avrai maturato  { interessi}  e il tuo nuovo capitale sarà  { importoConInteressi} "); 
+            }
+
         }
 
         static double ChiediImporto()
