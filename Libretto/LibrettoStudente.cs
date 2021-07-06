@@ -13,9 +13,8 @@ namespace Libretto
             string nome =NomeStudente();
             string cognome = CognomeStudente();
             double media = mediaEsami();
-            Console.WriteLine("");
-            Console.WriteLine("DATI STUDENTE");
-            Console.WriteLine($"Nome: {nome}\nCognome: {cognome}\nMedia: {media} ");
+            
+            Console.WriteLine($"\nDATI STUDENTE\nNome: {nome}\nCognome: {cognome}\nMedia: {media} ");
         }
         static string NomeStudente()
         {

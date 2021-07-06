@@ -3,15 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31410.357
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CartaDiCredito", "Week2\CartaDiCredito.csproj", "{36F7C337-CD9E-48FF-BA1C-5DE84FEA1EBF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CartaDiCredito", "Week2\CartaDiCredito.csproj", "{36F7C337-CD9E-48FF-BA1C-5DE84FEA1EBF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fattoriale", "Fattoriale\Fattoriale.csproj", "{CB03248B-3899-4C27-901D-D94A3BD78166}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fattoriale", "Fattoriale\Fattoriale.csproj", "{CB03248B-3899-4C27-901D-D94A3BD78166}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fibonacci", "Fibonacci\Fibonacci.csproj", "{C1BD9C2C-3A80-4CD0-958B-FDF07F6BF8B8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fibonacci", "Fibonacci\Fibonacci.csproj", "{C1BD9C2C-3A80-4CD0-958B-FDF07F6BF8B8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interessi", "Interessi\Interessi.csproj", "{16E87D39-A050-4264-9061-BAEF7EA294EE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Interessi", "Interessi\Interessi.csproj", "{16E87D39-A050-4264-9061-BAEF7EA294EE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Libretto", "Libretto\Libretto.csproj", "{3D5B16A2-3629-4D7C-B158-EEC4ACDCE5B2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Libretto", "Libretto\Libretto.csproj", "{3D5B16A2-3629-4D7C-B158-EEC4ACDCE5B2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "File", "File\File.csproj", "{37F605FB-EA17-44E5-ABBE-5E4FA4DD4F7B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{3D5B16A2-3629-4D7C-B158-EEC4ACDCE5B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3D5B16A2-3629-4D7C-B158-EEC4ACDCE5B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3D5B16A2-3629-4D7C-B158-EEC4ACDCE5B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37F605FB-EA17-44E5-ABBE-5E4FA4DD4F7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37F605FB-EA17-44E5-ABBE-5E4FA4DD4F7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37F605FB-EA17-44E5-ABBE-5E4FA4DD4F7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37F605FB-EA17-44E5-ABBE-5E4FA4DD4F7B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

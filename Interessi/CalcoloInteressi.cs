@@ -10,29 +10,65 @@ namespace Interessi
     {
         public static void Start()
         {
-            decimal value = CalcoloValoreIterativo();
-            Console.WriteLine($"Il valore complessivo è: {value}");
+            double importoDaVincolare = ChiediImporto();
+            int anni = ChiediAnni();
+            double importoFinaleIter=CalcoloValoreIterativo(importoDaVincolare,anni);
+            double importoFinale = CalcoloValoreRicorsivo(importoDaVincolare, anni);
+            Console.WriteLine($"Dopo {anni} da {importoDaVincolare} avrai {importoFinale}");
 
         }
 
-        //static decimal CalcoloValoreRicorsivo()
-        //{
-
-        //}
-        static decimal CalcoloValoreIterativo()
+        static double CalcoloValoreRicorsivo(double importo,int anni)
         {
-            Console.WriteLine("Inserisci importo di denaro iniziale:");
-            decimal sommaDenaro = CheckNum();
-            Console.WriteLine("Per quanti anni vuoi veicolare?");
-            int anni = CheckNum();
+            if (anni > 0)
+            {
+                return CalcoloValoreRicorsivo(importo + (importo * 3 / 100), anni - 1);
+            }
+            else
+            {
+                return importo;
+            }
 
+        }
+        static double CalcoloValoreIterativo(double importoDaVincolare,int anni)
+        {
+            double importoConInteressi = importoDaVincolare;
             for (int i=0;i<anni; i++)
             {
-                sommaDenaro = sommaDenaro + ((sommaDenaro * anni) / 100);
+                double importoAnnoPrecedente = importoConInteressi;
+                double interessi = importoConInteressi * anni / 100;
+                importoConInteressi = importoConInteressi + interessi;
+                Console.WriteLine($"Dopo {i+1} anni, da {importoAnnoPrecedente} avrai  maturato {interessi} e il tuo nuovo capitale sarà {importoConInteressi}");
             }
-            return sommaDenaro;
+            return importoConInteressi;
         }
-        static int CheckNum()
+
+        static double ChiediImporto()
+        {
+            Console.WriteLine("Inserisci importo di denaro iniziale:");
+            double importoDaVincolare = CheckNum();
+            return importoDaVincolare;
+        }
+
+        static int ChiediAnni()
+        {
+            Console.WriteLine("Per quanti anni vuoi vincolare?");
+            int anni = CheckNumInt();
+            return anni;
+
+        }
+        static double CheckNum()
+        {
+            double num = 0;
+            while (!double.TryParse(Console.ReadLine(), out num))
+            {
+                Console.WriteLine("Puoi inserire solo numeri! Riprova:");
+            }
+
+            return num;
+
+        }
+        static int CheckNumInt()
         {
             int num = 0;
             while (!int.TryParse(Console.ReadLine(), out num))
