@@ -10,11 +10,14 @@ namespace Libretto
     {
         public static void Start()
         {
-            string [] nome =NomeStudente();
-            string[] cognome = CognomeStudente();
-            int media = mediaEsami();
+            string nome =NomeStudente();
+            string cognome = CognomeStudente();
+            double media = mediaEsami();
+            Console.WriteLine("");
+            Console.WriteLine("DATI STUDENTE");
+            Console.WriteLine($"Nome: {nome}\nCognome: {cognome}\nMedia: {media} ");
         }
-        static int [] NomeStudente()
+        static string NomeStudente()
         {
             string nomeStudente = null;
             Console.WriteLine("Inserisci nome dello studente:");
@@ -22,7 +25,7 @@ namespace Libretto
             return nomeStudente;
         }
 
-        static string [] CognomeStudente()
+        static string CognomeStudente()
         {
             string cognomeStudente = null;
             Console.WriteLine("Inserisci cognome dello studente:");
@@ -30,16 +33,24 @@ namespace Libretto
             return cognomeStudente;
         }
 
-        static int mediaEsami()
+        static double mediaEsami()
         {
             Console.WriteLine("Quanti esami hai sostenuto?");
             int numeroEsami = CheckNum();
+            int[] votiEsami = new int[numeroEsami];
+            double mean = 0;
             for (int i=0;i<numeroEsami;i++)
             {
-
+                Console.WriteLine("Inserisci voto:");
+                votiEsami[i] = CheckNum();
             }
-
-            return media;
+            double somma = 0;
+            for(int i=0;i<numeroEsami; i++)
+            {
+                somma = somma + votiEsami[i];
+            }
+            mean = somma / numeroEsami;
+            return mean; 
 
         }
         static string CheckIns()

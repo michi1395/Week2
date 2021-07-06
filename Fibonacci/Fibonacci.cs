@@ -14,7 +14,7 @@ namespace Fibonacci
             int numeroDaCalcolare = CheckNum();
             int[] serieFib = new int[numeroDaCalcolare];
             serieFib=FibonacciIterazione(numeroDaCalcolare);
-            serieFib=FibonacciRicorsione(numeroDaCalcolare);
+            //serieFib=FibonacciRicorsione(numeroDaCalcolare);
         }
         static int CheckNum()
         {
@@ -43,21 +43,21 @@ namespace Fibonacci
             return serie;
         }
 
-        static int[] FibonacciRicorsione(int numero)
-        {
-            int[] serie = new int[numero];
-            int totale = 0;
+        //static int[] FibonacciRicorsione(int numero)
+        //{
+        //    int[] serie = new int[numero];
+        //    int totale = 0;
             
-                if(numero<10)
-                {
-                totale = totale + FibonacciRicorsione(totale + 1);
-                    serie[numero] = FibonacciRicorsione(totale);
+        //        if(numero<10)
+        //        {
+        //        totale = totale + FibonacciRicorsione(totale + 1);
+        //            serie[numero] = FibonacciRicorsione(totale);
 
-                    Console.WriteLine($"Il valore in posizione {totale} è {serie[totale]}");
-                }
-            return serie;
+        //            Console.WriteLine($"Il valore in posizione {totale} è {serie[totale]}");
+        //        }
+            //return serie;
         }
 
 
     }
-}
+
