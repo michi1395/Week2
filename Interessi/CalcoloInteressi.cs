@@ -42,14 +42,10 @@ namespace Interessi
                 double importoAnnoPrecedente = importoConInteressi;
                 double interessi = importoConInteressi * anni / 100;
                 importoConInteressi = importoConInteressi + interessi;
-                string messaggio = ($"Dopo il {i + 1}° anno, da  {importoAnnoPrecedente}  avrai maturato  { interessi}  e il tuo nuovo capitale sarà  { importoConInteressi} ");
-
-
-                FileManager.Indirizzatore(messaggio, i,save); //richiamo un'altra classe
+                Console.WriteLine($"Dopo {i+1} anni, da {importoAnnoPrecedente} avrai  maturato {interessi} e il tuo nuovo capitale sarà {importoConInteressi}");
             }
             return importoConInteressi;
         }
-
 
         static double ChiediImporto()
         {
