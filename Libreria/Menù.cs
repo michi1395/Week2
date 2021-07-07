@@ -10,7 +10,7 @@ namespace Libreria
     {
         public static void Start()
         {
-            Console.WriteLine("Benvenuto nella libreria");
+            Console.WriteLine("Benvenuto nella libreria\n");
 
             LibreriaManager.LeggiDaFile();
 

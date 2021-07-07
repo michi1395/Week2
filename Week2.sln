@@ -13,11 +13,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Interessi", "Interessi\Inte
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Libretto", "Libretto\Libretto.csproj", "{3D5B16A2-3629-4D7C-B158-EEC4ACDCE5B2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "File", "File\File.csproj", "{37F605FB-EA17-44E5-ABBE-5E4FA4DD4F7B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "File", "File\File.csproj", "{37F605FB-EA17-44E5-ABBE-5E4FA4DD4F7B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Classe", "Persona\Classe.csproj", "{FDFC3F4B-0615-4C42-A0AB-5C2E66B6BF7E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Classe", "Persona\Classe.csproj", "{FDFC3F4B-0615-4C42-A0AB-5C2E66B6BF7E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Libreria", "Libreria\Libreria.csproj", "{C3FF64B6-E3DD-47E8-A212-309E183217A6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Libreria", "Libreria\Libreria.csproj", "{C3FF64B6-E3DD-47E8-A212-309E183217A6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Banca", "Banca\Banca.csproj", "{B8D8D8CE-3AE9-4BA2-BBE2-353E0074F3F9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +59,10 @@ Global
 		{C3FF64B6-E3DD-47E8-A212-309E183217A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C3FF64B6-E3DD-47E8-A212-309E183217A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C3FF64B6-E3DD-47E8-A212-309E183217A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8D8D8CE-3AE9-4BA2-BBE2-353E0074F3F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8D8D8CE-3AE9-4BA2-BBE2-353E0074F3F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8D8D8CE-3AE9-4BA2-BBE2-353E0074F3F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8D8D8CE-3AE9-4BA2-BBE2-353E0074F3F9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
