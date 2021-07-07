@@ -18,7 +18,7 @@ namespace Libreria
         //Sarà possibile inserire un nuovo libro, eliminare un libro, modificare un libro o cercare i libri per genere
         static void Main(string[] args)
         {
-            Console.WriteLine("")
+            Menù.Start();
         }
     }
 }
