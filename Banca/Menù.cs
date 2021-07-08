@@ -10,15 +10,19 @@ namespace Banca
     {
         public static void Start()
         {
-            Console.WriteLine("Benvenuto nella tua BANCA!\n");
+            Console.WriteLine("Benvenuto nella tua BANCA!");
             int scelta = 0;
             do
             {
-                Console.WriteLine("Premi 1 per inserire un nuovo conto");
-                Console.WriteLine("Premi 2 per elimare un conto");
-                Console.WriteLine("Premi 3 per visualizzare conti presenti");
+                Console.WriteLine("\nPremi 1 per Inserire un nuovo conto");
+                Console.WriteLine("Premi 2 per Elimare un conto");
+                Console.WriteLine("Premi 3 per Visualizzare i conti presenti all'interno della banca");
+                Console.WriteLine("Premi 4 per Cercare i conti per tipo");
+                Console.WriteLine("Premi 5 per Effettuare un prelievo");
+                Console.WriteLine("Premi 6 per Effettuare un versamento");
+                Console.WriteLine("Premi 7 per Salvare i dati su file");
 
-                Console.WriteLine("Premi 0 se hai terminato!");
+                Console.WriteLine("Premi 0 per Uscire");
 
                 
                 bool isInt = true;
@@ -35,13 +39,25 @@ namespace Banca
                 switch (scelta)
                 {
                     case 1:
-                        AzioniUtente.CreaNuovoConto();
+                        BancaManager.CreaNuovoConto();
                         break;
                     case 2:
-                        AzioniUtente.EliminaConto();
+                        BancaManager.EliminaConto();
                         break;
                     case 3:
-                        AzioniUtente.StampaConti();
+                        BancaManager.StampaConti();
+                        break;
+                    case 4:
+                        BancaManager.CercaConto();
+                        break;
+                    case 5:
+                        BancaManager.EffettuaPrelievo();
+                        break;
+                    case 6:
+                        BancaManager.EffettuaVersamento();
+                        break;
+                    case 7:
+                        BancaManager.SalvaSuFile();
                         break;
                     case 0:
                         break;
